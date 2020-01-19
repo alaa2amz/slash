@@ -1,0 +1,40 @@
+ALAA A. M. ZAKARIA
+C-developer / Linux-adminstrator
+
+personal information
+
+currculum in reverse chronological order
+C-developer / Linux-adminstrator  2019 - present
+python develper 2017 - 2019
+ios/mac(obective c and swift) 2013 - 2018
+full stack LAMP(PHP) 2007 - 2012
+
+project selections
+noncer: an app and algorithm for computer aided study similar to anki (c and shell scripting)
+
+kanjismith: app to seek japanese complicated charecters by descriping it verbaly rather than partly or radically (python and shell script)
+
+siic-folow-up: company planning department aiding follow up local web application (python django)
+
+elsewidy cables catalogue app: an app for to catalogue el seweidy cables (ios swift)
+
+alaa kanji:an ios and mac japanese character dictionary (ios/mac obj-c)
+
+arabic-kanji-encyclopedia : arabic site php for japanese characters lookup and dynamic quizes
+
+mini-tools:
+apt-depend
+organizer
+xml-kanji-extractor-script
+
+
+aquanted tools and tecnologies(keywords grouped by topic's similarity)
+linux : sh bash sed awk core-utilities bc grep syslog inotify crontab vi ed ex find pipes redirection POSIX
+C: gcc make emacs cpp IPC threads file-descriptors streams sockets strings 
+python: django object-oriented itirators generators flask sql-alchemist
+general interest: assembly perl lisp schem
+database v: mysql postgres sqlite
+web: XML CSS PHP JS
+
+
+
