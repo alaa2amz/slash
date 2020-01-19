@@ -1,0 +1,2 @@
+git remote set-url origin "$1"
+#change the origin url to "https://username:password@github.com".
