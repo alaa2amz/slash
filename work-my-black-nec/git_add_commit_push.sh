@@ -13,5 +13,5 @@ cd $GIT_REPO_PATH
 git add .
 git commit -a -m "`/bin/date` $1 $2"
 git push origin master
-alaa2amz
+
 cd $CURRENT_DIR_PATH
