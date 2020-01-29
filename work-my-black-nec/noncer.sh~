@@ -1,0 +1,6 @@
+dator(){
+    date -R; }
+
+awkcliptor(){
+    awk -e 'BEGIN{ RS='^$' } {gsub(/^[\n\t ]*|[\n\t ]*$/,"");print}' ; }
+
