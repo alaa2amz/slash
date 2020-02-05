@@ -8,7 +8,8 @@ dator()
 
 awkcliptor()
 {
-    awk -e 'BEGIN{ RS="^$" } {gsub(/^[\n\t ]*|[\n\t ]*$/,"");print ;exit}' "$1"  ;
+    awk -e 'BEGIN{ RS="^$" } {gsub(/^[\n\t ]*|[\n\t ]*$/,"");print ;exit}'  "$1"  ;
+
 } 
 
 shator()
@@ -23,18 +24,35 @@ cartor()
 
     # loop over the fields of ^ separated of file given
     # as argument
-    for field in `cat $1`
+    while read -d'^' field
     do
-	echo "$field"
-	cfield="`awkcliptor $field`"
-	echo $cfield
-	name="`shator $cfield`".crd
-	#echo "$cfield" > "`shator $cfield`"
+	#echo "$field"
+
+	# trim and clip field of spaces and new lines in start and end
+	echo $field
+	cfield="$(awkcliptor <<EOF
+$field
+EOF
+)"
+	echo k
+	# echo clipped field for debugging
+	echo "--55--"
+	echo "$cfield"
+	read hhh ;<&0
+
+	# make the name of the file
+	name=`shator "$cfield"`.crd
+
+	# echo "$cfield" > "`shator $cfield`"
+
+	# add the creation date and overwrite the file if exist
 	echo 'd.created: '`dator` > $name
+
+	# add the field
 	echo "$cfield" >> $name
 	
 
-    done
+    done < "$1"
 }
 
 
