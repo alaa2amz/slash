@@ -46,8 +46,8 @@ EOF
 	# echo "$cfield" > "`shator $cfield`"
 
 	# add the creation date and overwrite the file if exist
-	echo 'd.created: '`dator` > $name
-
+	echo  'd.created: '`dator` > $name
+	echo   '---' >> $name
 	# add the field
 	echo "$cfield" >> $name
 	
@@ -59,18 +59,20 @@ EOF
 nonce ()
 {
     # check for needle file and touch it if not found.
-    [ ! -f needle ] && touch needle ;
+    [ ! -f needle ] && echo '' > needle ;
     # read the contents of needle
-    read NEEDLE_STRING ; < needle
+    read NEEDLE_STRING < needle
     for i in *.crd
     do
+	#echo $i
 	if
-	    [[ "$i" > NEEDLE_STRING ]]
+	    [[ "$i" > $NEEDLE_STRING ]]
 	then
+	    echo -e "\e[31m----------\e[00m"
 	    cat $i;
 	    read REPLY;
 	    echo "$i" > needle
 	fi
-    done
+    done 
     
 }
